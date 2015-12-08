@@ -1,0 +1,28 @@
+{
+  "name": "wdc",
+  "version": "0.0.0",
+  "description": "TODO",
+  "keywords": [ "TODO" ],
+  "bugs": {
+    "url": "https://github.com/owner/project/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "contributors": [],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/owner/project.git"
+  },
+  "scripts": {
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "jshintConfig": {
+    "esversion": 5
+  },
+  "jscsConfig": {
+    "preset": "jquery"
+  }
+}
