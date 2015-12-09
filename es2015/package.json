@@ -1,0 +1,38 @@
+{
+  "name": "wdc",
+  "version": "0.0.0",
+  "description": "TODO",
+  "keywords": [ "TODO" ],
+  "bugs": {
+    "url": "https://github.com/owner/project/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "contributors": [],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/owner/project.git"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/traceur --out ./js/bundle.js ./js/app.js",
+    "buildtest": "./node_modules/.bin/traceur --out ./test/bundle.js ./test/tests.js",
+    "check": "./node_modules/.bin/jshint ./js ./test",
+    "checkstyle": "./node_modules/.bin/jscs ./js ./test",
+    "postinstall": "cp ./node_modules/traceur/bin/traceur-runtime.js ./lib/traceur-runtime.js"
+  },
+  "dependencies": {
+    "traceur-runtime": "^0.0.59"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "jshint": "^2.9.1-rc1",
+    "jscs": "^2.7.0",
+    "traceur": "^0.0.93"
+  },
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "jscsConfig": {
+    "preset": "jquery"
+  }
+}
