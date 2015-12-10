@@ -13,9 +13,10 @@
     "url" : "https://github.com/owner/project.git"
   },
   "scripts": {
-    "build": "./node_modules/coffee-script/bin/coffee -c -o ./js ./src",
-    "check": "./node_modules/coffeelint/bin/coffeelint ./src",
-    "buildtest": "./node_modules/coffee-script/bin/coffee -c -o ./test/js ./test/src"
+    "build": "./node_modules/coffee-script/bin/coffee -c -o ./js ./src || true",
+    "check": "./node_modules/coffeelint/bin/coffeelint ./src || true",
+    "buildtest": "./node_modules/coffee-script/bin/coffee -c -o ./test/js ./test/src",
+    "checktest": "./node_modules/coffeelint/bin/coffeelint ./test/src"
   },
   "dependencies": {},
   "devDependencies": {
@@ -24,10 +25,11 @@
     "coffee-script": "^1.10.0",
     "coffeelint": "^1.14.2"
   },
-  "jshintConfig": {
-    "esversion": 5
-  },
-  "jscsConfig": {
-    "preset": "jquery"
+  "coffeelintConfig": {
+    "braces_spacing": "error",
+    "no_interpolation_in_single_quotes": "error",
+    "no_unnecessary_double_quotes": "error",
+    "no_unnecessary_fat_arrows": "error",
+    "prefer_english_operator": "error"
   }
 }
