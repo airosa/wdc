@@ -13,10 +13,10 @@
     "url" : "https://github.com/owner/project.git"
   },
   "scripts": {
-    "build": "./node_modules/coffee-script/bin/coffee -c -o ./js ./src || true",
-    "check": "./node_modules/coffeelint/bin/coffeelint ./src || true",
-    "buildtest": "./node_modules/coffee-script/bin/coffee -c -o ./test/js ./test/src",
-    "checktest": "./node_modules/coffeelint/bin/coffeelint ./test/src"
+    "compile": "coffee -c -m -o js src || true",
+    "compile:test": "coffee -c -m -o ./test/js ./test/src",
+    "lint": "coffeelint src test/src || true",
+    "clean": "rm js/* test/js/*"
   },
   "dependencies": {},
   "devDependencies": {
